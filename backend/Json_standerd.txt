@@ -1,0 +1,16 @@
+GET("getEvents") -> EventResponseBody
+POST("newEvent", EventRequestBody)
+
+
+EventResponseBody:
+{
+	"events": List<EventRequestBody>
+}
+
+EventRequestBody:
+{
+	"eventName": String,
+	"eventDescription": String,
+	"x": int,
+	"y": int,
+}
