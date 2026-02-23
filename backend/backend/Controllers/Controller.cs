@@ -5,15 +5,10 @@ namespace backend.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class Endpoints : ControllerBase
+    public class Controller(ILogger<Controller> logger) : ControllerBase
     {
-        private List<EventRequestBody> events;
-        private readonly ILogger<Endpoints> _logger;
-
-        public Endpoints(ILogger<Endpoints> logger)
-        {
-            _logger = logger;
-        }
+        private readonly List<EventRequestBody> events = [];
+        private readonly ILogger<Controller> _logger = logger;
 
         [HttpPost(Name = "newEvent")]
         public void NewEvent(EventRequestBody request)
