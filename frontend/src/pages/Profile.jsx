@@ -2,7 +2,7 @@ import './Profile.css';
 
 const mockUser = {
   id: 1,
-  name: 'Damian',
+  name: 'Test account',
   level: 5,
   points: 1250,
   achievements: [
